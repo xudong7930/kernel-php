@@ -109,8 +109,7 @@ class EasySDKKernel{
     }
 
     public function toJSONString($bizParams){
-        $json = new JsonUtil();
-        return $json->toJsonString($bizParams);
+        return  son_encode($bizParams);
     }
 
     public function sortMap($randomMap)
@@ -135,5 +134,4 @@ class EasySDKKernel{
         }
         return $data;
     }
-
 }
