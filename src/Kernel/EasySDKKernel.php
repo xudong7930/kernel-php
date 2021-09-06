@@ -103,13 +103,15 @@ class EasySDKKernel{
     public function sign($systemParams, $bizParams, $textParams, $privateKey)
     {
         $sortedMap = $this->getSortedMap($systemParams, $bizParams, $textParams);
-        print(var_dump($sortedMap));
         $requestUrl = $this->buildQueryString($sortedMap);
         $encodeStr = $privateKey.$requestUrl;
-        print($encodeStr);
         return hash("sha256",$encodeStr);
     }
 
+    public function toJSONString($bizParams){
+        $json = new JsonUtil();
+        return $json->toJsonString($bizParams);
+    }
 
 
     /**
