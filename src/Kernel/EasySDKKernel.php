@@ -109,7 +109,7 @@ class EasySDKKernel{
     }
 
     public function toJSONString($bizParams){
-        return  son_encode($bizParams);
+        return  json_encode($bizParams);
     }
 
     public function sortMap($randomMap)
