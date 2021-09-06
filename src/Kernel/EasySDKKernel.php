@@ -1,7 +1,6 @@
 <?php
 
 namespace EleMe\OpenApi\Kernel;
-use EleMe\OpenApi\Kernel\ElemeConstants;
 use EleMe\OpenApi\Kernel\Util\JsonUtil;
 use Exception;
 
@@ -63,7 +62,7 @@ class EasySDKKernel{
     {
         $requestUrl = null;
         foreach ($sortedMap as $sysParamKey => $sysParamValue) {
-            $requestUrl .= "$sysParamKey=" . urlencode($this->characet($sysParamValue, ElemeConstants::DEFAULT_CHARSET)) . "&";
+            $requestUrl .= "$sysParamKey=" . $this->characet($sysParamValue, ElemeConstants::DEFAULT_CHARSET) . "&";
         }
         $requestUrl = substr($requestUrl, 0, -1);
         return $requestUrl;
