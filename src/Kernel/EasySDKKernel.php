@@ -99,6 +99,7 @@ class EasySDKKernel{
                 $sortedMap = $this->textParams;
             }
         }
+        ksort($sortedMap);
         return $sortedMap;
     }
 
