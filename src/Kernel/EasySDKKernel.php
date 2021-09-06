@@ -3,6 +3,7 @@
 namespace EleMe\OpenApi\Kernel;
 use EleMe\OpenApi\Kernel\ElemeConstants;
 use EleMe\OpenApi\Kernel\Util\JsonUtil;
+use Exception;
 
 
 class EasySDKKernel{
@@ -47,10 +48,11 @@ class EasySDKKernel{
     }
 
     public function toRespModel($respMap){
-        $code = $respMap[ElemeConstants::CODE];
-        $msg = $respMap[ElemeConstants::MSG];
+        $map = json_decode($respMap, true);
+        $code = $map[ElemeConstants::CODE];
+        $msg = $map[ElemeConstants::MSG];
         if ($code == '200'){
-            $data = $respMap[ElemeConstants::BIZ_CONTENT_FIELD];
+            $data = $map[ElemeConstants::BIZ_CONTENT_FIELD];
             $model = json_decode($data, true);
             return $model;
         }
