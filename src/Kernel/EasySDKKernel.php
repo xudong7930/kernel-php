@@ -113,6 +113,11 @@ class EasySDKKernel{
         return $json->toJsonString($bizParams);
     }
 
+    public function sortMap($randomMap)
+    {
+        return $randomMap;
+    }
+
 
     /**
      * 转换字符集编码
