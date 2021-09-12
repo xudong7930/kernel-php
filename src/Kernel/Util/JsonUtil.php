@@ -22,7 +22,7 @@ class JsonUtil
     }
 
     public function objToJSONString($object){
-        $result = getTeaModelMap($object);
+        $result = $this-> getTeaModelMap($object);
         $json_string = json_encode($result);
         return $json_string;
     }
