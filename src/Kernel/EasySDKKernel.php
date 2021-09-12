@@ -136,4 +136,9 @@ class EasySDKKernel{
         }
         return $data;
     }
+
+    function objToJSONString($object){
+        $json = new JsonUtil();
+        return $json -> objToJSONString($object);
+    }
 }

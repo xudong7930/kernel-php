@@ -21,6 +21,11 @@ class JsonUtil
         return $result;
     }
 
+    public function objToJSONString($object){
+        $json_string = json_encode($object, JSON_FORCE_OBJECT);
+        return $json_string;
+    }
+
     private function getTeaModelMap(Model $teaModel)
     {
         $result = [];
