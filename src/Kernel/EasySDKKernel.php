@@ -98,6 +98,9 @@ class EasySDKKernel{
                 $sortedMap = $this->textParams;
             }
         }
+        if (empty($sortedMap)){
+            return $sortedMap;
+        }
         ksort($sortedMap);
         return $sortedMap;
     }
