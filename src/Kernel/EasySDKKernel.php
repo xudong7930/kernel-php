@@ -21,11 +21,9 @@ class EasySDKKernel{
         $this->config = $config;
     }
     public function getTimestamp(){
-        $time = explode (" ", microtime () );
-        $time = $time [1] . ($time [0] * 1000);
-        $time2 = explode ( ".", $time );
-        $time = $time2 [0];
-        return $time;
+        list($microsecond , $time) = explode(' ', microtime()); //' '中间是一个空格
+
+        return (float)sprintf('%.0f',(floatval($microsecond) + floatval($time))*1000);
     }
 
     public function getConfig($key)
