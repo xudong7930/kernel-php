@@ -1,5 +1,5 @@
 {
-  "name": "anubis_openapi/kernel_php82",
+  "name": "halfC/kernel_php82",
   "description": "anubis openapi kernel Output Library for PHP82",
   "minimum-stability": "stable",
   "type": "library",
