@@ -1,6 +1,6 @@
 {
-  "name": "half-c/kernel_php82",
-  "description": "anubis openapi kernel Output Library for PHP82",
+  "name": "xudong7930/kernel_php7",
+  "description": "anubis openapi kernel Output Library for PHP7.4|PHP8.0",
   "minimum-stability": "stable",
   "type": "library",
   "license": "Apache-2.0",
